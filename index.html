@@ -1,248 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 
-    <title>VenManager V1.0.1</title>
+  <title>VenManager V1.0.1</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-  </head>
-  <body>
-	<!-- test -->
-	<nav class="navbar navbar-inverse sidebar stuck navbar-fixed-top" role="navigation">
-	    <div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"><h5>VenManager V1.0.1</h5></a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-				<ul class="nav navbar-nav clicked">
-					<li class="active"><a href="#start">Start<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-					<li ><a href="#features">Features<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon glyphicon-th-list"></span></a></li>
-					<li ><a href="#installation">Installation<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon glyphicon-cog"></span></a></li>
-					<li ><a href="#initial-login">Initial Login<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon glyphicon-user"></span></a></li>
-					<li ><a href="#admin-dashboard">Admin Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-dashboard"></span></a></li>
-					<li ><a href="#add">Add<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-plus"></span></a></li>
-					<li ><a href="#purchase">Purchase<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a></li>
-					<li ><a href="#sales">Sales<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-shopping-cart"></span></a></li>
-					<li ><a href="#ledgers">Ledgers<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-duplicate"></span></a></li>
-					<li ><a href="#reports">Reports<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span></a></li>
-					<li ><a href="#settings">Settings & More<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-wrench"></span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	<!-- Content Here -->
-		<div class="main">
-			<div class="header">
-			    <div class="container text-center">
-					<div class="row">
-						<img src="assets/favicon.png" width="5%" height="5%">
-						<h3>VenManager V1.0.1</h3>
-						<p>Documentation</p>
-					</div>	
-				</div>
-			</div>
-			<div id="start">
-				<h1>VenManager - Inventory, Account & Sales Management</h1><hr>
-				<p>
-					Support :	
-					<a href="mailto:info@vencerlab.com">info@vencerlab.com</a><br>
-					Developed by :	<a href="http://vencerlab.com/" target="_blank">Vencerlab</a>
-				</p><br>
-				<p>
-					We appreciate your interest.<br>
-					Please read carefully the complete documentation before starting with VenManager.
-				</p>
-			</div>
-			<div id="features">
-				<h2>Main Features</h2><hr>
-				<ul type="circle">
-				    <li>Privileged Admin Dashboard</li>
-				    <li>Staff Dashboard</li>
-				    <li>Suppliers Ledger</li>
-				    <li>Customers Ledger</li>
-				    <li>Purchase Management</li>
-				    <li>Sales Management</li>
-				    <li>Invoice Generating</li>
-				    <li>Inventory Management</li>
-				    <li>Expense Management</li>
-				    <li>Damage Management</li>
-				    <li>To Be Stocked Out Product Alert</li>
-				    <li>Graphical Reports</li>
-				    <li>Print & PDF Download</li>
-				    <li>Multi User Creation</li>
-				    <li>Multiple Currencies</li>
-				    <li>General Settings</li>
-				</ul>
-			</div>
-			<div id="installation">
-				<h2>Installation</h2><hr>
-				<h3>Server Requirements</h3>
-				<ul type="disc">
-				    <li>PHP >= 5.6.4 (including PHP 7)</li>
-				    <li>OpenSSL PHP Extension</li>
-				    <li>PDO PHP Extension</li>
-				    <li>Mbstring PHP Extension</li>
-				    <li>Tokenizer PHP Extension</li>
-				    <li>XML PHP Extension</li>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
+    <i class="bi bi-list"></i>
+  </button>
 
-				</ul><h3>Installation Process</h3>
-				<ul type="square">
-				    <li>Please upload the <b>VenManager-V1.0.1.zip</b> file to the hosting server</li>
-				    <li>Once uploaded extract it to your desire place</li>
-				    <li>Then create database and import <b> public/db/database.sql</b></li>
-				    <li>Open extracted directory and look at the root there you have a file called <b>.env</b></li>
-				    <li>If you didn't find the <b>.env</b> file then follow below insturctions</li>
-					<!-- Sub-items -->
-					    <ul>
-						  <li style="margin-top:4%;">
-						  	Press <b>Settings</b> File Manager<br>
-						  	<img class="screenshot" src="assets/screenshots/dotfile1.PNG">
-						  </li>
-						  <li style="margin-top:4%;">
-						  	<b>Tick Show Hidden Files (dotfiles)</b><br>
-						  	<img class="screenshot" src="assets/screenshots/dotfile2.PNG">
-						  </li>
-						  <li style="margin-top:4%;">
-						  	You will see your <b>.env </b> file<br>
-						  	<img class="screenshot" src="assets/screenshots/dotfile3.PNG">
-						  </li>
-						</ul>
-					<!-- end-Sub-items -->
-				    
-				    <li style="margin-top:4%;">Open the <b>.env </b> file and change value of <b>"DB_DATABASE, DB_USERNAME, DB_PASSWORD"</b> </li>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <img src="assets/favicon.png" alt="VenManager" width="36" height="36">
+      <div>
+        <strong>VenManager</strong>
+        <small>v1.0.1</small>
+      </div>
+    </div>
 
-				    <li> <b>That's it! </b></li>
-				</ul>
-			</div>
-			<div id="initial-login">
-				<h2>Initial Login</h2><hr>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<h3>Login Infomation</h3>
-							</div>
-							<div class="panel-body">
-								<h4>Admin Login</h4>
-								<b>User :</b> admin@admin.com<br>
-								<b>Password :</b> abc@123<br><br>
+    <nav class="sidebar-nav" id="sidebarNav">
+      <a href="#start" class="nav-link active">
+        <i class="bi bi-house-door"></i> Start
+      </a>
+      <a href="#features" class="nav-link">
+        <i class="bi bi-grid"></i> Features
+      </a>
+      <a href="#installation" class="nav-link">
+        <i class="bi bi-gear"></i> Installation
+      </a>
+      <a href="#initial-login" class="nav-link">
+        <i class="bi bi-person"></i> Initial Login
+      </a>
+      <a href="#admin-dashboard" class="nav-link">
+        <i class="bi bi-speedometer2"></i> Admin Dashboard
+      </a>
+      <a href="#add" class="nav-link">
+        <i class="bi bi-plus-circle"></i> Add
+      </a>
+      <a href="#purchase" class="nav-link">
+        <i class="bi bi-briefcase"></i> Purchase
+      </a>
+      <a href="#sales" class="nav-link">
+        <i class="bi bi-cart"></i> Sales
+      </a>
+      <a href="#ledgers" class="nav-link">
+        <i class="bi bi-journal"></i> Ledgers
+      </a>
+      <a href="#reports" class="nav-link">
+        <i class="bi bi-bar-chart"></i> Reports
+      </a>
+      <a href="#settings" class="nav-link">
+        <i class="bi bi-sliders"></i> Settings
+      </a>
+    </nav>
 
-								<h4>User Login</h4>
-								<b>User :</b> user@user.com<br>
-								<b>Password :</b> abc@123<br>
-							</div>
-						</div>
-						<br />
-					</div>
-				</div>
-				<h4>User Login Interface</h4> <br/>
-				<img class="screenshot" src="assets/screenshots/1.PNG">
-			</div>
-			<div id="admin-dashboard">
-				<h2>Admin Dashboard</h2><hr>
-				<p>
-					<b>Admin Dashboard :</b> Admin are being able to see some system status on their dashboard page and can see how many suppliers, customers, users are registered to the system.
-				</p><br>
-				<img class="screenshot" src="assets/screenshots/2.jpg"><br><br><br>
-				<p>
-					<b>Graphical Reports :</b> Last 7 days sales, Customers Report, Expenses Report, Sales Report.
-				</p><br>
-				<img class="screenshot" src="assets/screenshots/3.jpg"><br><br>
-				<img class="screenshot" src="assets/screenshots/4.jpg"><br><br>
-				<img class="screenshot" src="assets/screenshots/5.jpg"><br><br>
-				<img class="screenshot" src="assets/screenshots/6.jpg">
-			</div>
-			<div class="text-center" style="margin-top: 4%; margin-bottom: 4%;">
-				<h1>All Features</h1>
-				<hr>
-			</div>
-			<div id="add">
-				<h2>Add</h2><hr>
-				<h3>Add Suppliers</h3>
-				<img class="screenshot" src="assets/screenshots/7.jpg">
-				<h3>Add Categories</h3>
-				<img class="screenshot" src="assets/screenshots/8.jpg">
-				<h3>Add Products</h3>
-				<img class="screenshot" src="assets/screenshots/9.jpg">
-				<h3>Add Customers</h3>
-				<img class="screenshot" src="assets/screenshots/10.jpg">
-				<h3>Add Expense</h3>
-				<img class="screenshot" src="assets/screenshots/11.jpg">
-				<h3>Add Damage</h3>
-				<img class="screenshot" src="assets/screenshots/12.jpg">
-				<h3>Add User</h3>
-				<img class="screenshot" src="assets/screenshots/12a.jpg">
-			</div>
-			<div id="purchase">
-				<h2>Purchase</h2><hr>
-				<img class="screenshot" src="assets/screenshots/13.jpg">
-			</div>
-			<div id="sales">
-				<h2>Sales</h2><hr>
-				<p>
-					<b>Invoice :</b> Invoice creation is much easier with VenManager.
-				</p><br>
-				<img class="screenshot" src="assets/screenshots/14.jpg">
-			</div>
-			<div id="ledgers">
-				<h2>Ledgers</h2><hr>
-				<h3>Suppliers Ledgers</h3>
-				<img class="screenshot" src="assets/screenshots/15.jpg">
-				<h3>Individual Supplier History</h3>
-				<img class="screenshot" src="assets/screenshots/15a.jpg">
-				<h3>Individual Supplier Payment</h3>
-				<img class="screenshot" src="assets/screenshots/15b.jpg">
-				<h3>Customers Ledgers</h3>
-				<img class="screenshot" src="assets/screenshots/16.jpg">
-				<h3>Individual Customer Payment</h3>
-				<img class="screenshot" src="assets/screenshots/16a.jpg">
-			</div>
-			<div id="reports">
-				<h2>Reports</h2><hr>
-				<h3>Purchase Report</h3>
-				<img class="screenshot" src="assets/screenshots/17.jpg">
-				<h3>Sales Report</h3>
-				<img class="screenshot" src="assets/screenshots/18.jpg">
-				<h3>Sales Details</h3>
-				<img class="screenshot" src="assets/screenshots/19.jpg">
-			</div>
-			<div id="settings">
-				<h2>General Settings</h2><hr>
-				<img class="screenshot" src="assets/screenshots/20.jpg">
-				<h3>Alert Notifications</h3>
-				<img class="screenshot" src="assets/screenshots/21.jpg">
-				<h3>Store Open & Close</h3>
-				<img class="screenshot" src="assets/screenshots/22.jpg"><hr>
-				<h4 class="text-center">Copyright &copy <a href="http://vencerlab.com/" target="_blank">Vencerlab.</a>  All rights reserved.</h4>
-			</div>
-		</div>
-	<!-- end-Content Here -->
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="bi bi-moon-stars"></i>
+        <span>Dark Mode</span>
+      </button>
+    </div>
+  </aside>
 
-	<!-- end-test -->
-	<!-- jQuery & JavaScript -->
-		<!-- jQuery -->
-	    <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-	    <!-- JavaScript -->
-	    <script src="assets/js/bootstrap.min.js"></script>
-	    <script src="assets/js/script.js"></script>
-    <!-- end-jQuery & JavaScript -->
-  </body>
+  <main class="main-content">
+    <div class="header">
+      <div class="container">
+        <div class="header-content">
+          <img src="assets/favicon.png" alt="VenManager" width="60" height="60">
+          <h2>VenManager <span>v1.0.1</span></h2>
+          <p>Inventory, Account &amp; Sales Management — Documentation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <section id="start">
+        <h1>VenManager — Inventory, Account &amp; Sales Management</h1>
+        <hr>
+        <div class="contact-info">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="info-card">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <small>Support</small>
+                  <a href="mailto:info@vencerlab.com">info@vencerlab.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="info-card">
+                <i class="bi bi-code-slash"></i>
+                <div>
+                  <small>Developed by</small>
+                  <a href="http://vencerlab.com/" target="_blank">Vencerlab</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-info mt-4">
+          <i class="bi bi-info-circle"></i>
+          We appreciate your interest. Please read the complete documentation before starting with VenManager.
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>Main Features</h2>
+        <hr>
+        <div class="features-grid">
+          <div class="feature-item"><i class="bi bi-shield-check"></i> Privileged Admin Dashboard</div>
+          <div class="feature-item"><i class="bi bi-people"></i> Staff Dashboard</div>
+          <div class="feature-item"><i class="bi bi-journal-bookmark"></i> Suppliers Ledger</div>
+          <div class="feature-item"><i class="bi bi-journal-text"></i> Customers Ledger</div>
+          <div class="feature-item"><i class="bi bi-basket"></i> Purchase Management</div>
+          <div class="feature-item"><i class="bi bi-cart-check"></i> Sales Management</div>
+          <div class="feature-item"><i class="bi bi-receipt"></i> Invoice Generating</div>
+          <div class="feature-item"><i class="bi bi-boxes"></i> Inventory Management</div>
+          <div class="feature-item"><i class="bi bi-cash-coin"></i> Expense Management</div>
+          <div class="feature-item"><i class="bi bi-exclamation-triangle"></i> Damage Management</div>
+          <div class="feature-item"><i class="bi bi-bell"></i> Stock Alert</div>
+          <div class="feature-item"><i class="bi bi-graph-up"></i> Graphical Reports</div>
+          <div class="feature-item"><i class="bi bi-printer"></i> Print &amp; PDF Download</div>
+          <div class="feature-item"><i class="bi bi-person-plus"></i> Multi User Creation</div>
+          <div class="feature-item"><i class="bi bi-currency-exchange"></i> Multiple Currencies</div>
+          <div class="feature-item"><i class="bi bi-sliders"></i> General Settings</div>
+        </div>
+      </section>
+
+      <section id="installation">
+        <h2>Installation</h2>
+        <hr>
+        <h3>Server Requirements</h3>
+        <div class="requirements-grid">
+          <div class="req-item"><i class="bi bi-check-circle-fill"></i> PHP &ge; 5.6.4 (including PHP 7)</div>
+          <div class="req-item"><i class="bi bi-check-circle-fill"></i> OpenSSL PHP Extension</div>
+          <div class="req-item"><i class="bi bi-check-circle-fill"></i> PDO PHP Extension</div>
+          <div class="req-item"><i class="bi bi-check-circle-fill"></i> Mbstring PHP Extension</div>
+          <div class="req-item"><i class="bi bi-check-circle-fill"></i> Tokenizer PHP Extension</div>
+          <div class="req-item"><i class="bi bi-check-circle-fill"></i> XML PHP Extension</div>
+        </div>
+
+        <h3 class="mt-4">Installation Process</h3>
+        <ol class="install-steps">
+          <li>Upload the <strong>VenManager-V1.0.1.zip</strong> file to the hosting server.</li>
+          <li>Once uploaded, extract it to your desired location.</li>
+          <li>Create a database and import <code>public/db/database.sql</code>.</li>
+          <li>Open the extracted directory and locate the <code>.env</code> file in the root.</li>
+        </ol>
+
+        <div class="callout callout-warning">
+          <h5><i class="bi bi-exclamation-triangle"></i> Can't find the <code>.env</code> file?</h5>
+          <ol>
+            <li>Open your <strong>File Manager</strong> settings.</li>
+            <li>Tick <strong>Show Hidden Files (dotfiles)</strong>.</li>
+            <li>The <code>.env</code> file will now be visible.</li>
+          </ol>
+          <div class="row g-3 mt-3">
+            <div class="col-md-4">
+              <img class="screenshot" src="assets/screenshots/dotfile1.PNG" alt="File Manager settings">
+              <small class="img-label">File Manager settings</small>
+            </div>
+            <div class="col-md-4">
+              <img class="screenshot" src="assets/screenshots/dotfile2.PNG" alt="Show hidden files">
+              <small class="img-label">Tick Show Hidden Files</small>
+            </div>
+            <div class="col-md-4">
+              <img class="screenshot" src="assets/screenshots/dotfile3.PNG" alt=".env file visible">
+              <small class="img-label">.env file visible</small>
+            </div>
+          </div>
+        </div>
+
+        <ol class="install-steps" start="5">
+          <li>Open the <code>.env</code> file and update <code>DB_DATABASE</code>, <code>DB_USERNAME</code>, and <code>DB_PASSWORD</code>.</li>
+          <li><strong>That's it!</strong></li>
+        </ol>
+      </section>
+
+      <section id="initial-login">
+        <h2>Initial Login</h2>
+        <hr>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-key"></i> Login Information</h5>
+              </div>
+              <div class="card-body">
+                <div class="login-info">
+                  <h6>Admin Login</h6>
+                  <div class="login-row"><span>Email</span> <code>admin@admin.com</code></div>
+                  <div class="login-row"><span>Password</span> <code>abc@123</code></div>
+                </div>
+                <hr>
+                <div class="login-info">
+                  <h6>User Login</h6>
+                  <div class="login-row"><span>Email</span> <code>user@user.com</code></div>
+                  <div class="login-row"><span>Password</span> <code>abc@123</code></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="mt-4">Login Interface</h4>
+        <img class="screenshot" src="assets/screenshots/1.PNG" alt="Login interface">
+      </section>
+
+      <section id="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+        <hr>
+        <div class="feature-block">
+          <h4>Dashboard Overview</h4>
+          <p>The admin dashboard displays system status including registered suppliers, customers, and users.</p>
+          <img class="screenshot" src="assets/screenshots/2.jpg" alt="Admin Dashboard">
+        </div>
+
+        <div class="feature-block">
+          <h4>Graphical Reports</h4>
+          <p>Last 7 days sales, Customers Report, Expenses Report, Sales Report.</p>
+          <div class="row g-3">
+            <div class="col-md-6"><img class="screenshot" src="assets/screenshots/3.jpg" alt="Report 1"></div>
+            <div class="col-md-6"><img class="screenshot" src="assets/screenshots/4.jpg" alt="Report 2"></div>
+            <div class="col-md-6"><img class="screenshot" src="assets/screenshots/5.jpg" alt="Report 3"></div>
+            <div class="col-md-6"><img class="screenshot" src="assets/screenshots/6.jpg" alt="Report 4"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider">
+        <h2>All Features</h2>
+        <hr>
+      </div>
+
+      <section id="add">
+        <h2>Add</h2>
+        <hr>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4>Add Suppliers</h4>
+            <img class="screenshot" src="assets/screenshots/7.jpg" alt="Add Suppliers">
+          </div>
+          <div class="col-lg-6">
+            <h4>Add Categories</h4>
+            <img class="screenshot" src="assets/screenshots/8.jpg" alt="Add Categories">
+          </div>
+          <div class="col-lg-6">
+            <h4>Add Products</h4>
+            <img class="screenshot" src="assets/screenshots/9.jpg" alt="Add Products">
+          </div>
+          <div class="col-lg-6">
+            <h4>Add Customers</h4>
+            <img class="screenshot" src="assets/screenshots/10.jpg" alt="Add Customers">
+          </div>
+          <div class="col-lg-6">
+            <h4>Add Expense</h4>
+            <img class="screenshot" src="assets/screenshots/11.jpg" alt="Add Expense">
+          </div>
+          <div class="col-lg-6">
+            <h4>Add Damage</h4>
+            <img class="screenshot" src="assets/screenshots/12.jpg" alt="Add Damage">
+          </div>
+          <div class="col-lg-6">
+            <h4>Add User</h4>
+            <img class="screenshot" src="assets/screenshots/12a.jpg" alt="Add User">
+          </div>
+        </div>
+      </section>
+
+      <section id="purchase">
+        <h2>Purchase</h2>
+        <hr>
+        <img class="screenshot" src="assets/screenshots/13.jpg" alt="Purchase">
+      </section>
+
+      <section id="sales">
+        <h2>Sales</h2>
+        <hr>
+        <p><strong>Invoice:</strong> Invoice creation is much easier with VenManager.</p>
+        <img class="screenshot" src="assets/screenshots/14.jpg" alt="Sales">
+      </section>
+
+      <section id="ledgers">
+        <h2>Ledgers</h2>
+        <hr>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4>Suppliers Ledgers</h4>
+            <img class="screenshot" src="assets/screenshots/15.jpg" alt="Suppliers Ledgers">
+          </div>
+          <div class="col-lg-6">
+            <h4>Individual Supplier History</h4>
+            <img class="screenshot" src="assets/screenshots/15a.jpg" alt="Supplier History">
+          </div>
+          <div class="col-lg-6">
+            <h4>Individual Supplier Payment</h4>
+            <img class="screenshot" src="assets/screenshots/15b.jpg" alt="Supplier Payment">
+          </div>
+          <div class="col-lg-6">
+            <h4>Customers Ledgers</h4>
+            <img class="screenshot" src="assets/screenshots/16.jpg" alt="Customers Ledgers">
+          </div>
+          <div class="col-lg-6">
+            <h4>Individual Customer Payment</h4>
+            <img class="screenshot" src="assets/screenshots/16a.jpg" alt="Customer Payment">
+          </div>
+        </div>
+      </section>
+
+      <section id="reports">
+        <h2>Reports</h2>
+        <hr>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4>Purchase Report</h4>
+            <img class="screenshot" src="assets/screenshots/17.jpg" alt="Purchase Report">
+          </div>
+          <div class="col-lg-6">
+            <h4>Sales Report</h4>
+            <img class="screenshot" src="assets/screenshots/18.jpg" alt="Sales Report">
+          </div>
+          <div class="col-lg-6">
+            <h4>Sales Details</h4>
+            <img class="screenshot" src="assets/screenshots/19.jpg" alt="Sales Details">
+          </div>
+        </div>
+      </section>
+
+      <section id="settings">
+        <h2>General Settings</h2>
+        <hr>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4>General Settings</h4>
+            <img class="screenshot" src="assets/screenshots/20.jpg" alt="General Settings">
+          </div>
+          <div class="col-lg-6">
+            <h4>Alert Notifications</h4>
+            <img class="screenshot" src="assets/screenshots/21.jpg" alt="Alert Notifications">
+          </div>
+          <div class="col-lg-6">
+            <h4>Store Open &amp; Close</h4>
+            <img class="screenshot" src="assets/screenshots/22.jpg" alt="Store Open & Close">
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <hr>
+        <p>Copyright &copy; <a href="http://vencerlab.com/" target="_blank">Vencerlab</a>. All rights reserved.</p>
+      </footer>
+    </div>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
 </html>
